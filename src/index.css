@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  --primaria: #2563eb;
+  --primaria-escura: #1d4ed8;
+  --texto: #0f172a;
+  --texto-suave: #64748b;
+  --fundo: #f8fafc;
+  --branco: #ffffff;
+  --borda: #e2e8f0;
+  --sombra: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+[data-theme='dark'] {
+  color-scheme: dark;
+  --primaria: #3b82f6;
+  --primaria-escura: #60a5fa;
+  --texto: #f1f5f9;
+  --texto-suave: #94a3b8;
+  --fundo: #000000;
+  --branco: #121212;
+  --borda: #2e2e2e;
+  --sombra: 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--primaria);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--primaria);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: var(--primaria-escura);
+}
+
+input, textarea, select {
+  background-color: var(--branco);
+  color: var(--texto);
+  border: 1.5px solid var(--borda);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+option {
+  background-color: var(--branco);
+  color: var(--texto);
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primaria);
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--texto-suave);
+}
